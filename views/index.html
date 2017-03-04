@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>大拇指点赞</title>
+<link rel="stylesheet" type="text/css" href="./public/stylesheets/index.css">
+<script type="text/javascript" src="./public/frameworks/jquery1.7.1.js"></script>
+<script type="text/javascript" src="./public/frameworks/system.js"></script>
+<script type="text/javascript" src="./public/frameworks/axios.js"></script>
+<script type="text/javascript" src="./app/utils/addNum.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<div id="praise" class="content">
+			<!-- 这块是通过html新加的,用完就删的感觉，或者原来html就有 -->
+			<a id="addNum" class="add_num">+1</a>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+	
+		SystemJS.config({
+	        baseURL: '/app/'
+	    });
+
+		function callBack(){
+        	var f = new $.thumb(0, $('#praise').get(0));
+        	f.clickAction();
+    	}
+
+		SystemJS.import('scripts/Thumb.js').then(function(m) {
+			$.extend({
+                thumb: m.default
+	        });
+	        callBack();
+		});
+	</script>
+</body>
+</html>

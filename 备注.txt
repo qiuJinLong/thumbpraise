@@ -1,0 +1,18 @@
+﻿1、需要在全局安装karam-cli和bable-cli
+
+2、该版本完成的功能
+1）.使用ES6完成点赞+1功能的父类PraiseButton。
+2）.开发子类Thumb实现大拇指方式点赞。
+3）.使用Babel编译ES6代码，并使用System.js可加载对应编译后的文件。
+4）.将编译后的文件挂载为jQuery的组件。
+5）.实现Karma完成对点赞+1组件的单元测试。
+
+3、使用karam进行单测的语句为
+karam start
+
+4、进行e2e测试的语句为:
+找到要执行e2e的文件，比如叫e2e.js。
+然后node e2e.js
+参考地址：http://www.cnblogs.com/fnng/p/5854875.html
+
+5、

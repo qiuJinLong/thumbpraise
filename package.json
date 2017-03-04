@@ -1,0 +1,35 @@
+{
+  "name": "thumbpraise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-plugin-transform-async-to-generator": "^6.22.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-register": "^6.23.0",
+    "co": "^4.6.0",
+    "co-body": "^5.0.0",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.5.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "koa": "^2.0.1",
+    "koa-body": "^2.0.0",
+    "koa-bodyparser": "^4.1.0",
+    "koa-router": "^7.0.1",
+    "koa-static": "^3.0.0",
+    "koa-swig": "^2.2.1",
+    "phantomjs": "^2.1.7",
+    "protractor": "^5.1.1",
+    "selenium-standalone": "^6.0.1",
+    "selenium-webdriver": "^3.1.0"
+  }
+}
