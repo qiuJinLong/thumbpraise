@@ -15,4 +15,4 @@ karam start
 然后node e2e.js
 参考地址：http://www.cnblogs.com/fnng/p/5854875.html
 
-5、
+5、node版本6.9.5
