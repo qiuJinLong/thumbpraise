@@ -28,7 +28,7 @@ const controllerInit = {
 			console.log(ctx.request.body);
 
 		 	var body = await this.requestPromise({
-				url: "http://localhost:8081/alles2016pk/thumbpraise/app/services/controService.php",
+				url: "http://localhost:8081/thumbpraise/app/services/controService.php",
 				method: "POST",
 				json: true,
 				headers: {

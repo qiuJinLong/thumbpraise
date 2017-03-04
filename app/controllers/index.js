@@ -1,20 +1,21 @@
 import controllerInit from "./controllerInit";
+import config from '../../config/config'
+
 const Koa = require("koa");
 const Router = require('koa-router');
-
-var co = require("co");
-var babelpolyfill = require("babel-polyfill");
+const babelpolyfill = require("babel-polyfill");
 const serve = require('koa-static');
-var koaBody   = require('koa-body');
-var path = require("path");
-var render = require('koa-swig');
-var co = require('co');
+const koaBody   = require('koa-body');
+const path = require("path");
+const render = require('koa-swig');
+const co = require('co');
 
 const app = new Koa();
 const router = new Router();
 
+
 app.context.render = co.wrap(render({
-	root: path.join(__dirname, './views'),
+	root: config.get('viewDir'),
 	autoescape: true,
 	cache: 'memory', // disable, set to false 
 	ext: 'html',
@@ -23,11 +24,11 @@ app.context.render = co.wrap(render({
 
 app.use(koaBody({formidable:{uploadDir: __dirname}}));
 
-app.use(serve('.'));
+app.use(serve(config.get('staticDir')));
 
 controllerInit.getAllRouter(app, router);
 
 app.use(router.routes())
 	.use(router.allowedMethods());
 
-app.listen(3000, () => console.log("服务器已启动！"));
+app.listen(config.get("port"), () => console.log("服务器已启动！"));
