@@ -16,3 +16,5 @@ karam start
 参考地址：http://www.cnblogs.com/fnng/p/5854875.html
 
 5、node版本6.9.5
+
+6、数据库用的是mysql，id,userid,num  这三个字段，建完表之后，新增一条数据，设置userid为1即可
