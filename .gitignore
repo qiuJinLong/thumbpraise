@@ -1,1 +1,7 @@
-node_modules/
+/tbpraise-serve/
+/tbpraise-fed/node_modules
+/tbpraise-fed/test
+/tbpraise-fed/*.js
+/tbpraise-fed/src/public
+/tbpraise-fed/src/views
+/tbpraise-fed/src/controllers/*.js
