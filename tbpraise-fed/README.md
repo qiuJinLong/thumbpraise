@@ -12,6 +12,10 @@
 
 # 还没实现e2e（端对端的测试）！！！！！
 
+# 注意！ Thumb.es这个文件中要引用PraiseButton.js而不是PraiseButton.es，也不能只写PraiseButton，这个问题我以后看看能不能直接修复了，或者看看用了webpack之后会不会好，用了webpack、之后我就只写PraiseButton试试
+
+#
+
 # 如何根据路由，直接返回cdn的静态页面？？？？？？如果要通过cdn话，就不经过路由了吧？？？即使经过也应该是经过cdn自己的路由？？？
 #
 #如何区分Babel中的stage-0,stage-1,stage-2以及stage-3（一）
