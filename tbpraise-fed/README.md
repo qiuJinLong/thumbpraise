@@ -10,9 +10,9 @@
 # 由于node 7.6版本以下不支持async， 所以在这里我们统一把文件夹改成后缀为.es,然后用babel编译成generator的形式，其实不带async的文件可以不用编译，但是为了统一，还是都编译了吧
 
 
-# 
+# 还没实现e2e（端对端的测试）！！！！！
 
-# 如何根据路由，直接返回cdn的静态页面？？？？？？
+# 如何根据路由，直接返回cdn的静态页面？？？？？？如果要通过cdn话，就不经过路由了吧？？？即使经过也应该是经过cdn自己的路由？？？
 #
 #如何区分Babel中的stage-0,stage-1,stage-2以及stage-3（一）
 	--http://www.cnblogs.com/chris-oil/p/5717544.html
@@ -29,6 +29,29 @@
       "regenerator": true
     }]
   ]，我先不用这个，看看能不能把项目跑完
+  	--我用这种方式不行，还是得用babel-polyfill，然后在页面上import它
+#
+#async  await还是得好好理解下，我不理解为什么这样返回，用async的好处，对照着代码，在研究下！！！
+
+#
+#  koa2获取post数据别用koa-body了，用koa-bodyparser@3 因为，koa-body的那种转化为genenrator的写法，你在运行的时候会给出一个警告，说在V3版本就要取消了啥的，反正看着警告感觉不太好，而且bodyparser用法更简洁
+
+#
+# 安装karma-phantomjs-launcher的时候，它需要下载一个phantomjs-2.1.1-windows.zip文件，在Users\AppData\Local\Temp\phantomjs下。所以你最好用cnpm在其他文件下，先把这个包安装一遍，这样就可以快速的下载下来这个文件，然后再在你需要的项目下安装这个launcher，这样的话就很快了。
+	--为什么不直接在项目下用淘宝安装，因为淘宝安装完之后，在windows下会出现很多快捷文件夹，很恶心，而且它的问件夹名字都带着版本号，虽然这个很好，但是我不太喜欢，感觉很乱。
+	-- 安装完cnpm之后，执行cnpm install karma-phantomjs-launcher --save-dev --registry=https://registry.npm.taobao.org
+	-- "jasmine-core": "^2.5.2",
+    "karma": "^1.5.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4"
+    这五个是单测用到的
+
+#
+#测试接口用到的框架是mocha
+ --  首先npm install mocha -g
+ --	然后再安装npm install supertest --save-dev
+ -- 编写完测试用例之后，到目录下运行mocha 文件名
 
 
 
@@ -51,4 +74,4 @@ karam start
 
 5、node版本6.9.5
 
-6、数据库用的是mysql，id,userid,num  这三个字段，建完表之后，新增一条数据，设置userid为1即可
+6、数据库用的是mysql，id,userid,num  这三个字段，建完表之后，新增一条数据，设置userid为1即可,数据表的名字叫addpraise
