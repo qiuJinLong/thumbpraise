@@ -2,3 +2,4 @@
 /tbpraise-fed/[A-Z-_a-z1-9]+.js
 /tbpraise-fed/src/public/scripts/*.js
 /tbpraise-fed/src/controllers/*.js
+/tbpraise-fed/yarn-error.log
