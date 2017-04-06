@@ -21,12 +21,15 @@
   "dependencies": {
     "babel-preset-stage-0": "^6.22.0",
     "co": "^4.6.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
     "koa": "^2.2.0",
     "koa-bodyparser": "3",
     "koa-router": "7.1.0",
     "koa-static": "^3.0.0",
     "koa-swig": "^2.2.1",
     "request": "^2.81.0",
-    "request-promise": "^4.2.0"
+    "request-promise": "^4.2.0",
+    "webpack": "^2.3.1"
   }
 }

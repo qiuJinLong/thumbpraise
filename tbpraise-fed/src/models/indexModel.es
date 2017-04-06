@@ -1,4 +1,4 @@
-import requestPromise from "request-promise";
+const requestPromise = require("request-promise");
 
 class indexModel {
 	constructor(ctx) {
@@ -25,4 +25,4 @@ class indexModel {
 	}
 }
 
-export default indexModel;
+module.exports = indexModel;

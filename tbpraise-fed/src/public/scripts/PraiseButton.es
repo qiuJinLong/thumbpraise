@@ -1,3 +1,5 @@
+require("../utils/addNum.es");
+
 class PraiseButton {
 	constructor(num, oEle) {
 		this.num = num;
@@ -48,4 +50,4 @@ class PraiseButton {
 	}
 }
 
-export default PraiseButton;
+module.exports = PraiseButton;

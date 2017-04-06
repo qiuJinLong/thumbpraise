@@ -1,4 +1,4 @@
-import PraiseButton from "./PraiseButton.js";
+const PraiseButton = require("./PraiseButton.es");
 
 class Thumb extends PraiseButton {
 	constructor(num, oEle) {
@@ -6,4 +6,4 @@ class Thumb extends PraiseButton {
 	}
 }
 
-export default Thumb;
+module.exports = Thumb;

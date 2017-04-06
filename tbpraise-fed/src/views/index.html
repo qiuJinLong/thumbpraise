@@ -2,21 +2,17 @@
 {% block title %}{{title}}{% endblock %}
 {% block head %}
 	{% parent %}
-	<link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
-	<script type="text/javascript" src="../frameworks/jquery1.7.1.js"></script>
-	<script type="text/javascript" src="../frameworks/system.js"></script>
-	<script type="text/javascript" src="../frameworks/axios.js"></script>
-	<script type="text/javascript" src="../utils/addNum.js"></script>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/index.css">	
+	<script type="text/javascript" src="http://cdn.bootcss.com/x-tag/1.5.11/x-tag-core.js"></script>
+	<script type="text/javascript" src="../scripts/x-praise.es"></script>	
 {% endblock %}
 
 {% block content %}
-<div class="wrap">
-		<div id="praise" class="content">
-			<!-- 这块是通过html新加的,用完就删的感觉，或者原来html就有 -->
-			<a id="addNum" class="add_num">+1</a>
-		</div>
-	</div>
-	
+	<x-praise></x-praise>
+
+	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://cdn.bootcss.com/systemjs/0.20.2/system.js"></script>
+	<script type="text/javascript" src="http://cdn.bootcss.com/axios/0.15.3/axios.js"></script>
 	<script type="text/javascript">
 	
 		SystemJS.config({
@@ -28,9 +24,9 @@
         	f.clickAction();
     	}
 
-		SystemJS.import('scripts/Thumb.js').then(function(m) {
+		SystemJS.import('scripts/Thumb.es').then(function(m) {			
 			$.extend({
-                thumb: m.default
+                thumb: m
 	        });
 	        callBack();
 		});

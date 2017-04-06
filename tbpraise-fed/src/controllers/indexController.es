@@ -1,6 +1,6 @@
 "use strict";
 
-import indexModel from "../models/indexModel";
+const indexModel = require("../models/indexModel.es");
 
 const indexController = {
 	index() {
@@ -19,4 +19,4 @@ const indexController = {
 	}
 };
 
-export default indexController;
+module.exports = indexController;
