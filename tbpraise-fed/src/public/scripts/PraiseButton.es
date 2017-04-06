@@ -1,4 +1,4 @@
-require("../utils/addNum.es");
+require("../utils/addNum.js");
 
 class PraiseButton {
 	constructor(num, oEle) {

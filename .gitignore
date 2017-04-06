@@ -3,3 +3,4 @@
 /tbpraise-fed/src/public/scripts/*.js
 /tbpraise-fed/src/controllers/*.js
 /tbpraise-fed/yarn-error.log
+/tbpraise-fed/build
