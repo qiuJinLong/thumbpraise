@@ -24,7 +24,7 @@
 # You gave us a visitor for the node type "ForAwaitStatement" but it's not a valid type
 	--如果出现这个问题，请更新全局的babel-cli，太坑爹了
 
-
+# 当把es文件编译成js文件的时候，在有async的时候，会出现下面的错误，因为js运行的时候，需要用到regeneratorRuntime这个变量。
 #  regeneratorRuntime is not defined regeneratorRuntime is not defined
 	--http://stackoverflow.com/questions/33527653/babel-6-regeneratorruntime-is-not-defined-with-async-await
 	--参考这个人的回答，只安装babel-plugin-transform-runtime就好，但是好像不需要在babelrc的plugins中配置"plugins": [
