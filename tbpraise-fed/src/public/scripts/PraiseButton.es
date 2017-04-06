@@ -1,5 +1,5 @@
 require("../utils/addNum.js");
-
+require("../stylesheets/index.css");
 class PraiseButton {
 	constructor(num, oEle) {
 		this.num = num;

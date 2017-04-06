@@ -79,3 +79,16 @@ karam start
 5、node版本6.9.5
 
 6、数据库用的是mysql，id,userid,num  这三个字段，建完表之后，新增一条数据，设置userid为1即可,数据表的名字叫addpraise
+
+#
+#首先是js引入css文件，然后用extract-text-webpack-plugin插件，把js和css文件分离！！！
+
+#
+#loader:"url-loader?limit=8192&name=images/[chunkhash:5].[name].[ext]"
+--这个地方我用chunkhash就会报错，用hash就不会报错！！！为什么？？？一直没有解决
+
+#
+# 你回家也是11点睡，也还得工作，这样的话，你可以在公司，但是别太忙了，轻松点，就像在家一样，然后9点左右下班，回来锻炼会。你要是9点左右下班，往家走，我估计我可以和你一起锻炼。
+
+#
+#
