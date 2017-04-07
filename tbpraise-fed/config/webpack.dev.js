@@ -1,7 +1,9 @@
 const path = require("path");
 const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+//const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 
 module.exports = {
 	entry: {
@@ -47,18 +49,31 @@ module.exports = {
 		}),
 		//js和css分离
 		new ExtractTextPlugin("stylesheets/[name].css"),
-		new webpack.optimize.UglifyJsPlugin({
-			compress: {
-				warnings: false,
-				drop_console: false
-			}
+		new webpack.optimize.CommonsChunkPlugin({
+			name: "vendor",
+			filename: "scripts/common/vendor.js"
 		}),
-		new OptimizeCssAssetsPlugin({
-			assetNameRegExp: /\.css$/g,
-			cssProcessor: require('cssnano'),
-			cssProcessorOptions: { discardComments: {removeAll: true } },
-			canPrint: true
+		new HtmlWebpackPlugin({
+			filename: "views/layout.html",
+			template: "src/views/layout.html",
+			inject: false
+		}),
+		new HtmlWebpackPlugin({
+			filename: "views/index.html",
+			template: "src/views/index.html"
 		})
+		// new webpack.optimize.UglifyJsPlugin({
+		// 	compress: {
+		// 		warnings: false,
+		// 		drop_console: false
+		// 	}
+		// }),
+		// new OptimizeCssAssetsPlugin({
+		// 	assetNameRegExp: /\.css$/g,
+		// 	cssProcessor: require('cssnano'),
+		// 	cssProcessorOptions: { discardComments: {removeAll: true } },
+		// 	canPrint: true
+		// })
 
 	]
 

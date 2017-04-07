@@ -47,6 +47,10 @@ module.exports = {
 		}),
 		//js和css分离
 		new ExtractTextPlugin("stylesheets/[name]-[chunkhash:5].css"),
+		new webpack.optimize.CommonsChunkPlugin({
+			name: "vendor",
+			filename: "scripts/common/vendor-[chunkhash:5].js"
+		}),
 		new webpack.optimize.UglifyJsPlugin({
 			compress: {
 				warnings: false,

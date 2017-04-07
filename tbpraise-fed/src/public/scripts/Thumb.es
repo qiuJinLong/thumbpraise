@@ -1,8 +1,8 @@
 const PraiseButton = require("./PraiseButton.es");
 
 class Thumb extends PraiseButton {
-	constructor(num, oEle) {
-		super(num, oEle);
+	constructor(num) {
+		super(num);
 	}
 }
 
