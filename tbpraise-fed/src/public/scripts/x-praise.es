@@ -14,7 +14,7 @@ xtag.register("x-praise", {
 
 			let _this = this;
 			this.classList.add("active");
-			
+			thumb.sendAjax();
 			setTimeout(function() {
 				_this.classList.remove("active");
 			}, 1000);
