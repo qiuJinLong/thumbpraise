@@ -1,7 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-//const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 
@@ -69,18 +68,6 @@ module.exports = {
 			template: "src/widgets/index.html",
 			inject: false
 		})
-		// new webpack.optimize.UglifyJsPlugin({
-		// 	compress: {
-		// 		warnings: false,
-		// 		drop_console: false
-		// 	}
-		// }),
-		// new OptimizeCssAssetsPlugin({
-		// 	assetNameRegExp: /\.css$/g,
-		// 	cssProcessor: require('cssnano'),
-		// 	cssProcessorOptions: { discardComments: {removeAll: true } },
-		// 	canPrint: true
-		// })
 
 	]
 
