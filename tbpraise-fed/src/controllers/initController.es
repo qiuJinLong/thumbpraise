@@ -6,6 +6,7 @@ const controllerInit = {
 	init(app, router) {
 		router.get("/index/index", indexController.index());
 		router.get("/index", indexController.index());
+		router.get("/index/update", indexController.update());
 		router.post("/receive", indexController.update());
 		
 	}
