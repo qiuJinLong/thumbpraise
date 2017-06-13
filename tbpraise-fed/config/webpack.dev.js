@@ -54,13 +54,20 @@ module.exports = {
 			filename: "scripts/common/vendor.js"
 		}),
 		new HtmlWebpackPlugin({
-			filename: "views/layout.html",
-			template: "src/views/layout.html",
+			filename: "../views/layout.html",
+			template: "src/widgets/layout.html",
 			inject: false
 		}),
 		new HtmlWebpackPlugin({
-			filename: "views/index.html",
-			template: "src/views/index.html"
+			filename: "../views/index.html",
+			template: "src/views/index.js",
+			inject: false,
+			chunks:["vendor", "index", "tags"]
+		}),
+		new HtmlWebpackPlugin({
+			filename: "../widgets/index.html",
+			template: "src/widgets/index.html",
+			inject: false
 		})
 		// new webpack.optimize.UglifyJsPlugin({
 		// 	compress: {

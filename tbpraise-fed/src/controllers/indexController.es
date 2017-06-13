@@ -1,6 +1,6 @@
 "use strict";
 
-const indexModel = require("../models/indexModel.es");
+const indexModel = require("../models/indexModel.js");
 
 const indexController = {
 	index() {

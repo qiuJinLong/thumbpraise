@@ -7,8 +7,8 @@ const koaSwig = require("koa-swig");
 const co = require("co");
 const babelPolyfill = require("babel-polyfill");
 const bodyParser = require('koa-bodyparser');
-const initController = require("./controllers/initController.es");
-const config = require("./config/config.es");
+const initController = require("./controllers/initController.js");
+const config = require("./config/config.js");
 
 
 const app = new Koa();
