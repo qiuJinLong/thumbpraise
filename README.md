@@ -3,7 +3,7 @@
 		yarn + karma + jasmine + phantomjs + mocha + supertest + Selenium + protractor
 	-- PHP：负责操作数据库，封装接口数据让node来请求
 	-- Nodejs+swig模板+KOA2： 负责渲染页面，数据请求中间件，路由功能
-	-- x-tag： 组件化的一个插件，这个是基于html5 web components（这个将来会变成vue或者react)
+	-- x-tag：组件化库，对html5 Web Components的封装（将来会变成vue或者react)
 	-- pjax: pushstate + ajax ，用来做单页带浏览记录的ajax操作
 	-- gulp+webpack：gulp用来打包node端程序，webpack用来打包前端程序
 	-- es6+babel：使用es6来写js及node，并且使用babel把es6转义成es5
