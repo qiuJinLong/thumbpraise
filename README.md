@@ -12,6 +12,7 @@
 	-- mocha：路由的自动化测试 
 	-- selenium+protractor：页面点击的自动化测试
 
+``` html
 > tbpraise-serve：php服务端
 > tbpraise-fed： node前端
 > tbpraise-serve放到php环境下运行
@@ -21,7 +22,9 @@
 > npm run gulp
 > cd build
 > supervisor app.js
+```
 
+``` html
 > 测试用例运行方法：
 > karam: 
 	> cd tbpraise-fed 
@@ -35,6 +38,6 @@
 > selenium
 	> cd tbpraise-fed\test
 	> node e2e.js
-
+```
 
 	
