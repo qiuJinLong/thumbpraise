@@ -14,7 +14,7 @@
 
 ``` html 
 	You gave us a visitor for the node type "ForAwaitStatement" but it's not a valid type
-	--如果出现这个问题，请更新全局的babel-cli，太坑爹了
+	--如果出现这个问题，请更新全局的babel-cli，坑爹
 ```
 
 ### 当把es文件编译成js文件的时候，在有async的时候，会出现下面的错误，因为js运行的时候，需要用到regeneratorRuntime这个变量。
@@ -30,7 +30,7 @@ regeneratorRuntime is not defined regeneratorRuntime is not defined
   	--我用这种方式不行，还是得用babel-polyfill，然后在页面上import它
 ```
 
-> * async  await还是得好好理解下，我不理解为什么这样返回，用async的好处，对照着代码，在研究下！！！
+> * async  await还是得好好理解下，我不理解为什么这样返回，用async的好处，对照着代码，在研究下！
 
 > * koa2获取post数据别用koa-body了，用koa-bodyparser@3 因为，koa-body的那种转化为genenrator的写法，你在运行的时候会给出一个警告，说在V3版本就要取消了啥的，反正看着警告感觉不太好，而且bodyparser用法更简洁
 
@@ -62,7 +62,7 @@ regeneratorRuntime is not defined regeneratorRuntime is not defined
 #
 1、需要在全局安装karam-cli和bable-cli
 
-2、该版本完成的功能
+2、早期版本完成功能
 1）.使用ES6完成点赞+1功能的父类PraiseButton。
 2）.开发子类Thumb实现大拇指方式点赞。
 3）.使用Babel编译ES6代码，并使用System.js可加载对应编译后的文件。
@@ -82,11 +82,10 @@ karam start
 6、数据库用的是mysql，id,userid,num  这三个字段，建完表之后，新增一条数据，设置userid为1即可,数据表的名字叫addpraise
 
 #
-#首先是js引入css文件，然后用extract-text-webpack-plugin插件，把js和css文件分离！！！
+#首先是js引入css文件，然后用extract-text-webpack-plugin插件，把js和css文件分离！
 
 #
 #loader:"url-loader?limit=8192&name=images/[chunkhash:5].[name].[ext]"
---这个地方我用chunkhash就会报错，用hash就不会报错！！！为什么？？？一直没有解决
+--这个地方我用chunkhash就会报错，用hash就不会报错！为什么？
 
-#
 #

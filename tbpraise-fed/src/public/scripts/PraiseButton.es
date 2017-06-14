@@ -4,6 +4,14 @@ class PraiseButton {
 	constructor(num) {
 		this.num = num;
 	}
+
+	clickAction() {
+		axios.get('/index/startupdate')
+			.then(function(response) {})
+			.catch(function(error) {
+				console.log(error);
+			});
+	}
 	
 	sendAjax() {
 		this.num = add(this.num);

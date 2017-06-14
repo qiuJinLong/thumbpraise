@@ -4,6 +4,7 @@ class indexModel {
 	constructor(ctx) {
 		this.ctx = ctx;
 	}
+	
 	updateNum() {
 		const options = {
 			url: "http://localhost:8081/thumbpraise/tbpraise-serve/services/controService.php",
@@ -22,6 +23,12 @@ class indexModel {
 				reject(err);
 			});
 		})
+	}
+	
+	startupdate() {
+		return new Promise((resolve, reject) => {
+            resolve({ data: 1 }); 
+        })
 	}
 }
 

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpackdev": "better-npm-run webpack:dev",
-    "webpackprod": "better-npm-run webpack:prod"
+    "webpackprod": "better-npm-run webpack:prod",
+    "gulp": "gulp"
   },
   "betterScripts": {
     "webpack:dev": {

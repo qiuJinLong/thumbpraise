@@ -4,13 +4,22 @@
     <meta charset="utf-8">
     <title>{% block title %}My Site{% endblock %}</title>
     {% block head %}
+    	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.0/jquery.js"></script>
+    	<script type="text/javascript" src="https://cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.js"></script>
 		<script type="text/javascript" src="http://cdn.bootcss.com/axios/0.15.3/axios.js"></script>
 		<script type="text/javascript" src="http://cdn.bootcss.com/x-tag/1.5.11/x-tag-core.js"></script>
     {% endblock %}
     {% block styles %}{% endblock %}
 </head>
 <body>
-    {% block content %}{% endblock %}
+	<a href="/index/star">跳转到星星</a>
+	<a href="/index/praise">跳转到大拇指</a>
+	<div id="changeContent">
+    	{% block content %}{% endblock %}
+    </div>
+    <script type="text/javascript">
+    	$(document).pjax("a", "#changeContent");
+    </script>
 </body>
 {% block script %}{% endblock %}
 </html>

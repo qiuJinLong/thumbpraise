@@ -8,9 +8,14 @@ module.exports = {
 	entry: {
 		index: [
 			path.join(__dirname, "../src/public/scripts/Thumb.es")
+			
+		],
+		star: [
+			path.join(__dirname, "../src/public/scripts/Star.es")
 		],
 		tags: [
-			path.join(__dirname, "..", "src/public/scripts/x-praise.es")
+			path.join(__dirname, "..", "src/public/scripts/x-praise.es"),
+			path.join(__dirname, '../src/public/scripts/x-star.es')
 		]
 	},
 	output: {		
@@ -63,6 +68,17 @@ module.exports = {
 			inject: false,
 			chunks:["vendor", "index", "tags"]
 		}),
+		new HtmlWebpackPlugin({
+			filename: "../views/star.html",
+			template: "src/views/star.js",
+			inject: false,
+			chunks:["vendor", "star", "tags"]
+		}),
+		new HtmlWebpackPlugin({
+			filename: '../widgets/star.html',
+            template: 'src/widgets/star.html',        
+            inject: false
+        }),
 		new HtmlWebpackPlugin({
 			filename: "../widgets/index.html",
 			template: "src/widgets/index.html",

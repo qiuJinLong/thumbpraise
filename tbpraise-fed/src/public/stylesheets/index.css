@@ -1,9 +1,12 @@
 *{margin: 0; padding: 0}
+html, body{height: 100%}
 @keyframes loopae {
 	0%   {opacity:0; top: 0}
 	80%  {opacity:1; top: -20px}
 	100% {opacity: 0; top: -20px}
 }
+
+body {background: linear-gradient(#94D28A 0%, #D0D8CB 80%)}
 a{text-decoration: none; color: #000}
 .wrap{position: absolute; top: 50%; left: 50%; margin-left: -25px; margin-top: -25px}
 .content{position: relative; width: 50px; height: 50px; background: url(../images/praise.png) no-repeat; background-size: 100%; cursor: pointer}
@@ -13,4 +16,87 @@ a{text-decoration: none; color: #000}
 .content.disable{background: url(../images/forbid-praise.png) no-repeat; background-size: 100%}
 .content.active .add_num{
 	animation:loopae 1s;-moz-animation:loopae 1s; -webkit-animation:loopae 1s; 	-o-animation:loopae 1s
+}
+
+
+.star {
+    margin: 300px 50%;
+    position: relative;
+    display: block;
+    color: red;
+    width: 0px;
+    height: 0px;
+    z-index: 999;
+    border-right:  100px solid transparent;
+    border-bottom: 70px  solid red;
+    border-left:   100px solid transparent;
+    -moz-transform:    rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    -ms-transform:     rotate(35deg);
+    -o-transform:      rotate(35deg);
+}
+.star:before {
+    border-bottom: 80px solid red;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: "";
+    -webkit-transform: rotate(-35deg);
+    -moz-transform:    rotate(-35deg);
+    -ms-transform:     rotate(-35deg);
+    -o-transform:      rotate(-35deg);
+
+}
+.star1{
+    position: relative;
+    display: block;
+    color: red;
+    top: 3px;
+    left: -105px;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid red;
+    border-left: 100px solid transparent;
+    -webkit-transform: rotate(-70deg);
+    -moz-transform:    rotate(-70deg);
+    -ms-transform:     rotate(-70deg);
+    -o-transform:      rotate(-70deg);
+
+}
+
+.num {
+    display: block !important;
+    -webkit-animation: neon2 1.5s ease-in-out alternate;
+    animation: neon2 1.5s ease-in-out alternate;
+    -webkit-animation-iteration-count: 1;
+    /* Safari 和 Chrome */
+    font-size: 40px;
+    color: #FF1177;
+    ;
+    position: absolute;
+    right: 10%;
+    top: 10%;
+}
+
+.hide {
+    display: none;
+}
+
+@-webkit-keyframes neon2 {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+    }
 }
